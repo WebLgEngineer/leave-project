@@ -28,7 +28,99 @@
 
 <body>
 	<!-- 開始程式 -->
-	
+	<div class="container my-5">
+		<div class="border p-3 w-100 mx-auto" style="max-width: 800px;">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label for="user">請假對象</label>
+						<select class="form-control" id="user">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label for="reasonSelect" class="d-block">
+							<div class="d-flex">
+								<span class="mr-auto">請假事由</span>
+								<div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input radio-js" type="radio" name="inlineRadioOptions"
+											id="inlineRadio1" value="1" checked>
+										<label class="form-check-label fz-2" for="inlineRadio1">預設事項</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input radio-js" type="radio" name="inlineRadioOptions"
+											id="inlineRadio2" value="2">
+										<label class="form-check-label fz-2" for="inlineRadio2">而外輸入</label>
+									</div>
+								</div>
+							</div>
+
+						</label>
+
+						<select class="form-control" id="reasonSelect">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+						<input type="text" class="form-control" id="reasonInput" placeholder="請輸入事由">
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label for="user">起始時間</label>
+						<div class="row">
+							<div class="col-7">
+								<input class="form-control" type="date" id="startDate">
+							</div>
+							<div class="col-5 pl-0">
+								<input class="form-control" type="time" id="startTime" name="appt" min="09:00"
+									max="18:00" required>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="form-group">
+						<label for="user">結束時間</label>
+						<div class="row">
+							<div class="col-7">
+								<input class="form-control" type="date" id="endDate">
+							</div>
+							<div class="col-5 pl-0">
+								<input class="form-control" type="time" id="endTime" name="appt" min="09:00" max="18:00"
+									required>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-lg-3 ml-auto">
+					<button type="button" class="btn btn-primary w-100" id="go">生成</button>
+				</div>
+				<div class="col-12 pt-4">
+					<hr>
+					<div class="form-group">
+						<label for="result">結果</label>
+						<textarea class="form-control" id="result" rows="3"></textarea>
+					</div>
+					<button type="button" class="btn btn-primary" onclick="copyEvent('result')">Copy</button>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
 
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
