@@ -35,11 +35,6 @@
 					<div class="form-group">
 						<label for="user">請假對象</label>
 						<select class="form-control" id="user">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
 						</select>
 					</div>
 				</div>
@@ -65,18 +60,25 @@
 						</label>
 
 						<select class="form-control" id="reasonSelect">
-							<option>1</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5</option>
 						</select>
 						<input type="text" class="form-control" id="reasonInput" placeholder="請輸入事由">
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="form-group">
-						<label for="user">起始時間</label>
+						<label for="user">
+							<div class="d-flex">
+								<span class="mr-3">起始時間</span>
+								<div>
+									<div class="form-check form-check-inline">
+										<input class="form-check-input checkbox-js" type="checkbox" value="1" id="defaultCheck1" checked="checked">
+										<label class="form-check-label fz-2" for="defaultCheck1">
+											是否為當天
+										</label>
+									</div>
+								</div>
+							</div>
+						</label>
 						<div class="row">
 							<div class="col-7">
 								<input class="form-control" type="date" id="startDate">
@@ -91,12 +93,12 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="form-group">
-						<label for="user">結束時間</label>
+						<label for="user" class="d-block">結束時間</label>
 						<div class="row">
-							<div class="col-7">
+							<div class="col-7 pr-0" id="end">
 								<input class="form-control" type="date" id="endDate">
 							</div>
-							<div class="col-5 pl-0">
+							<div class="col-5">
 								<input class="form-control" type="time" id="endTime" name="appt" min="09:00" max="18:00"
 									required>
 							</div>
@@ -109,11 +111,23 @@
 				</div>
 				<div class="col-12 pt-4">
 					<hr>
-					<div class="form-group">
-						<label for="result">結果</label>
+					<div class="form-group mb-2">
+						<label for="main" class="">主旨</label>
+						<input type="text" class="form-control" id="main">
+					</div>
+					<div class="d-flex justify-content-end">
+						<button type="button" class="btn btn-primary" id="mainCopy">Copy</button>
+					</div>
+				</div>
+
+				<div class="col-12 pt-4">
+					<div class="form-group mb-2">
+						<label for="result" class="">內文</label>
 						<textarea class="form-control" id="result" rows="3"></textarea>
 					</div>
-					<button type="button" class="btn btn-primary" onclick="copyEvent('result')">Copy</button>
+					<div class="d-flex justify-content-end">
+						<button type="button" class="btn btn-primary"id="resultCopy">Copy</button>
+					</div>
 				</div>
 
 			</div>
