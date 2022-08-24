@@ -5,15 +5,12 @@ var member = [
     'MichelleHsieh【謝婷蓁】',
     'AllenLee【李東昇】',
     'JungKang【康家榮】',
-    'MarkHu【胡訓身】',
     'ArthurYu【游超能】',
     'MattWu【吳維珉】',
     'IanLau【劉昱揚】',
-    'KaiShengLiu【劉鎧升】',
     'LewisLin【林紀霖】',
     'StephenChang【張世賢】',
     'XavierKuo【郭嘉元】',
-    'TerryLKTsai【蔡立功】'
 ];
 var reason = [
     '請選擇',
